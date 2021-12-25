@@ -132,7 +132,9 @@ code {
 }
 
 .message-like {
-    margin-right: 12px;
+    margin-top: 12px;
+    width: fit-content;
+    cursor: pointer;
 }
 
 .message-like {
