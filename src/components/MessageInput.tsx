@@ -15,6 +15,7 @@ const MessageInput = ({messages, setMessages, isEditing, editMessage, setIsEditi
 
   const inputHandler = (e: { target: { value: SetStateAction<string>; }; }) => setText(e.target.value);
   const sendMessage = () => {
+    if (text === '') return;
     const dateNow = new Date();
     const newMessage: IMessage = {
       text,
@@ -28,6 +29,7 @@ const MessageInput = ({messages, setMessages, isEditing, editMessage, setIsEditi
     setText('');
   };
   const saveEdit = () => {
+    if (text === '') return;
     const newMessages = messages.map(msg => {
       if ('id' in editMessage && msg.id === editMessage.id) return {...editMessage, text};
       return msg;
