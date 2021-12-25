@@ -1,13 +1,151 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #1a0c32;
+    color: #ad45ff;
+}
+
+input, select, textarea, button {
+    outline: none !important;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.preloader {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.header, .message-list, .message-input-text, .message-input-button {
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+    padding: 20px;
+    border: solid 2px;
+    border-radius: 12px;
+    margin: 12px;
+}
+
+.message-input-button {
+    cursor: pointer;
+}
+
+.message-list {
+    flex-direction: column;
+    height: calc(100vh - 172px);
+    overflow-y: scroll;
+    display: block;
+}
+
+.message-input {
+    display: flex;
+}
+
+.message-input-text {
+    background-color: #1a0c32;
+    border-color: #ad45ff;
+    width: calc(100% - 100px);
+    color: white;
+    font-size: 16px;
+}
+
+.message-input-text, .message-input-button {
+    margin-top: 0;
+}
+
+.message-input-button {
+    margin-left: 0;
+}
+
+.message {
+    display: flex;
+    padding: 12px 0;
+}
+
+.message-user-avatar {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    overflow: hidden;
+    margin-right: 12px;
+}
+
+.message-user-name {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.message-center {
+    width: 30%;
+}
+
+.message-time {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.message-user-avatar img {
+    height: 70px;
+}
+
+.own-message {
+    display: flex;
+    padding: 12px 0;
+    width: 100%;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    padding-left: 50%;
+}
+
+.message-text {
+    margin-right: 12px;
+    font-size: 16px;
+    color: white;
+}
+
+.message-time {
+    font-size: 14px;
+}
+
+.message-edit {
+    cursor: pointer;
+    margin-right: 12px;
+}
+
+.message-delete {
+    cursor: pointer;
+    margin-left: 12px;
+}
+
+.message-like {
+    margin-right: 12px;
+}
+
+.message-like {
+    margin-top: 12px;
+}
+
+.messages-divider {
+    text-align: center;
+    border: solid 1px;
+    opacity: 0.6;
+    width: 200px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 12px;
 }
